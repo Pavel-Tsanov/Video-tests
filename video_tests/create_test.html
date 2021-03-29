@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Създаване на тест</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="javascript/questions.js"></script>
+</head>
+<body>
+<div>
+    <ul class="test-nav">
+        <li><a href="index.php">Начало</a></li>
+        <li><a href="tests.php">Тестове</a></li>
+        <li><a href="edit_tests.php">Администрация</a></li>
+        <li><a href="results.php">Резултати</a></li>
+    </ul>
+</div>
+<div class="test">
+    <fieldset class="create-test">
+        <form id="formID" action="process_tests.php" method="post" enctype="multipart/form-data">
+            <p> Име на теста
+                <input id="testName" name="test_name" type="text" size="30" value="">
+            </p>
+            <button class="create-button" id="submitBtn" name='submit' type="submit" onclick="validateTest(event)">
+                Създай теста
+            </button>
+        </form>
+        <button id="addBtn" onclick="addQuestion()">Добави въпрос</button>
+        <div id="error-pop-up">
+        </div>
+    </fieldset>
+</div>
+</body>
+</html>
